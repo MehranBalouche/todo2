@@ -19,8 +19,8 @@
       </div>
       <div class="body">
         <form id="form">
-          <input type="text" id="todo_input" />
-          <input type="submit" value="Add Todo" id="todo_submit" />
+          <input type="text" id="todo_input" autofocus>
+          <input type="submit" value="Add Todo" id="todo_submit">
         </form> 
 
         <p id="alertEmptyInout">⚠️inpout can`t be empty⚠️</p>
@@ -29,24 +29,22 @@
     </div>
     <!-- todo -->
     <div class="todo-container" >
-      <div class="status" id="no_status" ondrop="dropHandler()" ondragover="dragOverHandler(event)">
+      <div class="status" id="no_status" ondrop="dropHandler(event)" ondragover="dragOverHandler(event)">
 
           <h1>No Status</h1>
           <button id="add_btn" data-target-modal="#todo_form">+ Add Todo</button>
-          
-         
 
       </div>
 
-      <div class="status" ondrop="dropHandler()" ondragover="dragOverHandler(event)">
+      <div class="status" ondrop="dropHandler(event)" ondragover="dragOverHandler(event)">
         <h1>Not Started</h1>
       </div>
 
-      <div class="status" ondrop="dropHandler()" ondragover="dragOverHandler(event)">
+      <div class="status" ondrop="dropHandler(event)" ondragover="dragOverHandler(event)">
         <h1>In Progress</h1>
       </div>
 
-      <div class="status" ondrop="dropHandler()" ondragover="dragOverHandler(event)">
+      <div class="status" ondrop="dropHandler(event)" ondragover="dragOverHandler(event)">
         <h1>Completed</h1>
       </div>
 
@@ -59,7 +57,10 @@
 </html>
 
 
+
+<!-- example of todo item -->
+
 <!-- <div class="todo" draggable="true">
-      Buy a Pizza
-      <span class="close">&times;</span>
-    </div> -->
+  Buy a Pizza
+  <span class="close">&times;</span>
+</div> -->

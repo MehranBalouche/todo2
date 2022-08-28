@@ -79,17 +79,22 @@ function createTodoElems(value){
     no_status.appendChild(divElem);
 }
 
+// drag and drop function
 function dragStartHandler (event) {
-    // event
-    _log(event.dataTransfer.target)
+    event.dataTransfer.setData('elemId', event.target.id);
 }
 
 function dropHandler (event) {
-    event.preventDefault()
+    let targetId = event.dataTransfer.getData('elemId');
+    let targetElem = $.getElementById(targetId);
+
+    event.target.append(targetElem);
 }
 
-function dragOverHandler () {
-    _log('drop')
+function dragOverHandler (event) {
+    event.preventDefault();
+    // event.preventDefault();
+    _log('yui')
 }
 
 // here we controle submit form
